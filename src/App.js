@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import SeasonDisplay from './components/SeasonDisplay';
-import { ImSpinner9 } from "react-icons/im";
+// import { ImSpinner9 } from "react-icons/im";
+import Spinner from './components/Spinner';
+
 
 function App() {
   const [latitude, setLatitude] = useState(null);
@@ -23,7 +25,7 @@ function App() {
   return <div>
     {locError}
     <div style={{ display: locError ? "none" : "flex" }}>
-      Latitude: {latitude || <ImSpinner9 />} - Longitude: {longitude || <ImSpinner9 />}
+      Latitude: {latitude || <Spinner />} - Longitude: {longitude || <Spinner />}
     </div>
     <div><SeasonDisplay lat={latitude} /></div>
   </div>
