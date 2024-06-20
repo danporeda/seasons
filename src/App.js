@@ -25,7 +25,8 @@ function App() {
   return <div>
     {locError}
     <div style={{ display: locError ? "none" : "flex" }}>
-      Latitude: {latitude || <Spinner />} - Longitude: {longitude || <Spinner />}
+      Latitude: {latitude || <Spinner message="Please allow location detection" />} 
+      - Longitude: {longitude || <Spinner message="Please allow location detection" />}
     </div>
     <div><SeasonDisplay lat={latitude} /></div>
   </div>
